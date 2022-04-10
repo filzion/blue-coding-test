@@ -1,11 +1,11 @@
 Feature: Example
 
 Background:
-Given step 1
+Given I'm on google home page
 
 Scenario: Scenario
-Given step 2
+When I search for "coisa"
 When step 3
-Then step 4
+
 
 
