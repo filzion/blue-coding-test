@@ -6,7 +6,15 @@ from selenium.common.exceptions import TimeoutException
 
 
 class Example(PageObject):
-    element_example = PageElement(id_='id_of_element')
+    title = "G1 - O portal de notícias da Globo"
 
-    def po_function(self):
-        pass
+    banners = PageElement(xpath='//div[@class="bstn-hl-wrapper"]')
+
+    def reached_home_page(self):
+        return self.w.title == self.title
+
+        
+
+    def click_on_first_banner(self):
+        clickable_banners = self.w.find_elements_by_xpath('//div[@class="bstn-hl-wrapper"]')
+        clickable_banners[0].click()
