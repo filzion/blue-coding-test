@@ -1,3 +1,4 @@
-from modules.po_example import Example
+from modules.po_catalog import CatalogPage
+from modules.po_login import LoginPage
 
-__all__ = ["Example"]
+__all__ = ["CatalogPage", "LoginPage"]
